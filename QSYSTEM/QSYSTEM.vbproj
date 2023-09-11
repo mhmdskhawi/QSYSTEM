@@ -52,6 +52,9 @@
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TECH.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -122,6 +125,9 @@
     <None Include="packages.config" />
     <None Include="Register_2.zip" />
     <None Include="Resources\ALR.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TECH.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
