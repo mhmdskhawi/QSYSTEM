@@ -10,13 +10,17 @@ Public Class Form1
     Dim speechComplete As Boolean = False
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        voices = speaker.GetInstalledVoices(culture)
-        speaker.SelectVoice(voices(0).VoiceInfo.Name)
 
-        Dim Resv As String = Command().Replace("""", "")
+
+
         My.Computer.Audio.Play(My.Resources.ALR, AudioPlayMode.Background)
+
         Threading.Thread.Sleep(1000)
 
+
+        Dim Resv As String = Command().Replace("""", "")
+        voices = speaker.GetInstalledVoices(culture)
+        speaker.SelectVoice(voices(0).VoiceInfo.Name)
         'Resv = "عميل رقم | 445 | برجاء استلام التقارير   | "
         For Each txtt As String In Resv.Split("|")
             If voices.Count > 0 Or Resv <> "" Then
