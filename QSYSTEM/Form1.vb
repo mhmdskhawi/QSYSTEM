@@ -13,7 +13,7 @@ Public Class Form1
         voices = speaker.GetInstalledVoices(culture)
         speaker.SelectVoice(voices(0).VoiceInfo.Name)
 
-        Dim Resv As String = Command()
+        Dim Resv As String = Command().Replace("""", "")
         My.Computer.Audio.Play(My.Resources.ALR, AudioPlayMode.Background)
         Threading.Thread.Sleep(1000)
 
